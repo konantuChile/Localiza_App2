@@ -9,7 +9,6 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.konan.localiza_app.R;
-import com.example.konan.localiza_app.Visitas.ClientesActivity;
 
 import java.util.ArrayList;
 
