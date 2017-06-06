@@ -21,7 +21,6 @@ public class ClientesActivity extends AppCompatActivity {
     TextView nombreClie;
     TextView direccionClie;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

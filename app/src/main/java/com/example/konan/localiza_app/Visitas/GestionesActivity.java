@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -19,14 +20,16 @@ public class GestionesActivity extends AppCompatActivity {
 
     TextView nombreClieTV;
     TextView direccionClieTV;
+    String nombreClie;
+    String direccionClie;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gestiones);
 
-        nombreClieTV = (TextView) findViewById(R.id.nombreClienteGestion);
-        direccionClieTV = (TextView) findViewById(R.id.direccionClienteGestion);
+        nombreClieTV = (TextView) findViewById(R.id.nombreClienteGestiones);
+        direccionClieTV = (TextView) findViewById(R.id.direccionClienteGestiones);
         Button gestionsalirboton = (Button) findViewById(R.id.gestionesSalirBoton);
 
         Bundle parametro = getIntent().getExtras();
@@ -34,7 +37,9 @@ public class GestionesActivity extends AppCompatActivity {
         if (parametro != null)
         {
             nombreClieTV.setText(parametro.getString("nombreClie"));
+            nombreClie = parametro.getString("nombreClie");
             direccionClieTV.setText(parametro.getString("direccionClie"));
+            direccionClie = parametro.getString("direccionClie");
         }
 
         gestionsalirboton.setOnClickListener(new View.OnClickListener() {
@@ -65,5 +70,19 @@ public class GestionesActivity extends AppCompatActivity {
         // Lo aplico
         lvGestion.setAdapter(adaptador);
 
+        lvGestion.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                final int pos = position;
+                Intent intent = new Intent(GestionesActivity.this, IniciaGestionActivity.class);
+
+                TextView nombreGestiontextView = (TextView) view.findViewById(R.id.nombreGestiones);
+                String nombreGest = nombreGestiontextView .getText().toString();
+                intent.putExtra("nombreGest", nombreGest);
+                intent.putExtra("nombreClie",nombreClie);
+                intent.putExtra("direccionClie", direccionClie);
+                startActivity(intent);
+            }
+        });
     }
 }

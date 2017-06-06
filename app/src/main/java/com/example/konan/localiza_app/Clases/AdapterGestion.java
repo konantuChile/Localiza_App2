@@ -9,7 +9,6 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.konan.localiza_app.R;
-import com.example.konan.localiza_app.Visitas.GestionesActivity;
 
 import java.util.ArrayList;
 
@@ -44,8 +43,8 @@ public class AdapterGestion extends BaseAdapter {
         Gestiones dir;
         dir = items.get(position);
 
-        TextView nombreClie = (TextView) v.findViewById(R.id.nombreGestion);
-        nombreClie.setText(dir.getNombreGestion());
+        TextView nombreClie = (TextView) v.findViewById(R.id.nombreGestiones);
+        nombreClie.setText(dir.getNombreGestiones());
 
         return v;
     }
