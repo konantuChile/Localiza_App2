@@ -31,7 +31,7 @@ public class IniciaGestionActivity extends AppCompatActivity {
 
         Button  iniGestionsalirboton = (Button) findViewById(R.id.iniGestionesSalirBoton);
         ImageButton sigGestionesImageBoton = (ImageButton) findViewById(R.id.sigGestionesImageBoton);
-        //ImageButton histGestionesImageBoton = (ImageButton) findViewById(R.id.histGestionesImageBoton);
+        ImageButton histGestionesImageBoton = (ImageButton) findViewById(R.id.histGestionesImageBoton);
 
         Bundle parametro = getIntent().getExtras();
 
@@ -63,6 +63,18 @@ public class IniciaGestionActivity extends AppCompatActivity {
                 intent.putExtra("nombreGest", nombreGest);
                 intent.putExtra("nombreClie",nombreClie);
                 intent.putExtra("direccionClie", direccionClie);
+
+                startActivity(intent);
+
+            }
+        });
+
+        histGestionesImageBoton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(IniciaGestionActivity.this,HistorialActivity.class);
+
+                intent.putExtra("nombreClie",nombreClie);
 
                 startActivity(intent);
 
