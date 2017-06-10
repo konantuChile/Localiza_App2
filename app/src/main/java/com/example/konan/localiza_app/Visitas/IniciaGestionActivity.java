@@ -68,9 +68,5 @@ public class IniciaGestionActivity extends AppCompatActivity {
 
             }
         });
-
-
-
-
     }
 }

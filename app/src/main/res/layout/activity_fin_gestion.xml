@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:weightSum="1">
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/fintableLayout11"
+            android:layout_width="fill_parent"
+            android:layout_height="155dp" >
+
+            <!-- 2 columns -->
+            <TableRow
+                android:id="@+id/fintableRowContacto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip" >
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="112dp"
+                    android:layout_height="52dp"
+                    app:srcCompat="@drawable/clientes"
+                    android:layout_weight="0.03" />
+
+                <LinearLayout android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/nombreClienteFinGestion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nombre_cliente"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+
+                        android:textSize="21sp" />
+
+                    <TextView
+                        android:id="@+id/direccionClienteFinGestion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Direccion CLiente" />
+
+                </LinearLayout>
+            </TableRow>
+            <!-- edittext span 2 column -->
+            <TableRow
+                android:id="@+id/tableRowTituloFin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip" >
+
+                <LinearLayout android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nombreGestionFinGestion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre Gestion" />
+
+                    <TextView
+                        android:id="@+id/lblTituloFinGestion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FINALIZADA CON EXITO"
+                        android:textSize="21sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <!-- edittext span 2 column -->
+
+        </TableLayout>
+            <TextView
+                android:id="@+id/lblNroFinGestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gestion N°:"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/broFinGestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1234566"
+                android:textSize="21sp" />
+
+
+        <Button
+            android:id="@+id/salirFinGestionBoton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.03"
+            android:text="Salir" />
+
+    </LinearLayout>
+
+</RelativeLayout>
