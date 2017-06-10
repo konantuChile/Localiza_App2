@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import com.example.konan.localiza_app.Clases.AdapterCliente;
 import com.example.konan.localiza_app.Clases.Clientes;
-import com.example.konan.localiza_app.MenuActivity;
 import com.example.konan.localiza_app.R;
 
 import java.util.ArrayList;
@@ -26,16 +25,19 @@ public class ClientesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clientes);
 
+
         Button clientessalirboton = (Button) findViewById(R.id.clientesSalirBoton);
         final TextView nombreClie = (TextView) findViewById(R.id.nombreClienteItem);
         final TextView direccionClie = (TextView) findViewById(R.id.direccionClienteItem);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // If your minSdkVersion is 11 or higher, instead use:
+        // getActionBar().setDisplayHomeAsUpEnabled(true);
+
         clientessalirboton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ClientesActivity.this,MenuActivity.class);
-
-                startActivity(intent);
+                finish();
 
             }
         });

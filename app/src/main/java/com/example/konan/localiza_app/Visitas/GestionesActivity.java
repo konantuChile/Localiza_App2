@@ -28,6 +28,8 @@ public class GestionesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gestiones);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         nombreClieTV = (TextView) findViewById(R.id.nombreClienteGestiones);
         direccionClieTV = (TextView) findViewById(R.id.direccionClienteGestiones);
         Button gestionsalirboton = (Button) findViewById(R.id.gestionesSalirBoton);

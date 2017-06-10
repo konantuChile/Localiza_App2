@@ -15,6 +15,9 @@ public class FinGestionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fin_gestion);
 
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
         Button salirFinGestionBoton = (Button) findViewById(R.id.salirFinGestionBoton);
 
 

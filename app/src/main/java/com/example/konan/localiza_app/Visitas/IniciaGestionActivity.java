@@ -25,6 +25,8 @@ public class IniciaGestionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicia_gestion);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         nombreClieGestTV = (TextView) findViewById(R.id.nombreClienteIniGestion);
         direccionClieGestTV = (TextView) findViewById(R.id.direccionClienteIniGestion);
         nombreGestionGestTV = (TextView) findViewById(R.id.nombreGestionIniGestion);

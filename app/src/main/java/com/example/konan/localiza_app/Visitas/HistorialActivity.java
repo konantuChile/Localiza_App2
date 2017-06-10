@@ -20,6 +20,8 @@ public class HistorialActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_historial);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         nombreClieHisttTV = (TextView) findViewById(R.id.nombreClienteHistGestion);
         Button salirHistGestionBoton = (Button) findViewById(R.id.salirHistGestionBoton);
 
