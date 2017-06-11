@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.konan.localiza_app">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.example.konan.localiza_app.Visitas.ClientesActivity" />
+                />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MenuActivity"
+            android:label="Menú Principal"
+            android:parentActivityName="com.example.konan.localiza_app.LoginActivity"
+        />
+        <activity android:name=".Visitas.ClientesActivity"
+            android:parentActivityName="com.example.konan.localiza_app.MenuActivity"
+            android:label="Listado Clientes a Visitar"/>
+        <activity android:name=".Visitas.GestionesActivity"
+            android:parentActivityName="com.example.konan.localiza_app.Visitas.ClientesActivity"
+            android:label="Listado Gestiones a Realizar"/>
+        <activity android:name=".Visitas.IniciaGestionActivity"
+            android:parentActivityName="com.example.konan.localiza_app.Visitas.GestionesActivity"
+            android:label="Inicia Gestión"/>
+        <activity android:name=".Visitas.IngresaGestionActivity"
+            android:parentActivityName="com.example.konan.localiza_app.Visitas.IniciaGestionActivity"
+            android:label="Ingresar Gestion"/>
+        <activity android:name=".Visitas.FinGestionActivity"
+            android:parentActivityName="com.example.konan.localiza_app.Visitas.ClientesActivity"
+            android:label="Gestión Finalizada"/>
+        <activity android:name=".Visitas.HistorialActivity"
+            android:parentActivityName="com.example.konan.localiza_app.Visitas.GestionesActivity"
+            android:label="Listado Histórico Gestiones"/>
+    </application>
+
+</manifest>

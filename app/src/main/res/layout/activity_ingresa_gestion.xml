@@ -156,7 +156,7 @@
                     android:id="@+id/resultadoSeleccionado"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Contacto Seleccionado"
+                    android:text="Resultado Seleccionado"
                     android:textSize="21sp" />
             </TableRow>
 
@@ -228,7 +228,7 @@
                     android:id="@+id/comentarioGestion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Comentario Ingresado"
+                    android:text=""
                     android:textSize="21sp" />
             </TableRow>
 

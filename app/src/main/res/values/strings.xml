@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Localiza</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (opcional)</string>
+    <string name="action_sign_in">Ingresar</string>
+    <string name="action_sign_in_short">Ingresar</string>
+    <string name="error_invalid_email">Email invalido</string>
+    <string name="error_invalid_password">Password muy Corta</string>
+    <string name="error_incorrect_password">Password incorrecta</string>
+    <string name="error_field_required">Campo Obligatorio</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="nombre_cliente">Nombre Cliente</string>
+    <string name="salir">Salir</string>
+    <string name="texto_frase">Texto Frase</string>
+    <string name="title_activity_menu">MenuActivity</string>
+</resources>

@@ -16,12 +16,12 @@ public class Clientes {
     public Clientes() {
         super();
     }
-    public Clientes(String idCliente, String nombreCliente, String direccionCliente,  Drawable imagen) {
+
+    public Clientes(String idCliente, String nombreCliente, String direccionCliente) {
         super();
         this.idCliente = idCliente;
         this.nombreCliente = nombreCliente;
         this.direccionCliente= direccionCliente;
-        this.imagen = imagen;
     }
 
     public Clientes(String nombreCliente, String direccionCliente) {

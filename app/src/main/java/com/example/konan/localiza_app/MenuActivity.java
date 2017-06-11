@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.konan.localiza_app.Planifica.NodisponibleActivity;
 import com.example.konan.localiza_app.Visitas.ClientesActivity;
 
 
@@ -34,9 +33,9 @@ public class MenuActivity extends AppCompatActivity {
         planificarboton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuActivity.this, NodisponibleActivity.class);
+               // Intent intent = new Intent(MenuActivity.this, NodisponibleActivity.class);
 
-                startActivity(intent);
+                //startActivity(intent);
             }
         });
 
