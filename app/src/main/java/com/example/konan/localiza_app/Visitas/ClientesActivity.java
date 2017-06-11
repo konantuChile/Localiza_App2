@@ -17,9 +17,6 @@ import java.util.ArrayList;
 
 public class ClientesActivity extends AppCompatActivity {
 
-    TextView nombreClie;
-    TextView direccionClie;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +24,7 @@ public class ClientesActivity extends AppCompatActivity {
 
 
         Button clientessalirboton = (Button) findViewById(R.id.clientesSalirBoton);
+        final  TextView idClie = (TextView) findViewById(R.id.idClienteItem);
         final TextView nombreClie = (TextView) findViewById(R.id.nombreClienteItem);
         final TextView direccionClie = (TextView) findViewById(R.id.direccionClienteItem);
 
@@ -47,10 +45,6 @@ public class ClientesActivity extends AppCompatActivity {
         Clientes item;
 
         // Introduzco los datos
-
-
-
-
         item = new Clientes("5231905-6","RUPERTO DEL CARMEN PINTO","1 DE MAYO 1017, SANTIAGO");
         arraydir.add(item);
         item = new Clientes("6021138-8","JUAN ADRIAN FIGUEROA","10 DE JULIO 1398, SANTIAGO");
@@ -99,32 +93,18 @@ public class ClientesActivity extends AppCompatActivity {
                 final int pos = position;
                 Intent intent = new Intent(ClientesActivity.this, GestionesActivity.class);
 
+                TextView idClietextView = (TextView) view.findViewById(R.id.idClienteItem);
+                String idClie = idClietextView.getText().toString();
                 TextView nombreClietextView = (TextView) view.findViewById(R.id.nombreClienteItem);
                 String nombre = nombreClietextView.getText().toString();
                 TextView direccionClietextView = (TextView) view.findViewById(R.id.direccionClienteItem);
                 String direccion = direccionClietextView.getText().toString();
+                intent.putExtra("movClie","0");
+                intent.putExtra("idClie",idClie);
                 intent.putExtra("nombreClie", nombre);
                 intent.putExtra("direccionClie", direccion);
                 startActivity(intent);
             }
         });
     }
-/*
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        //System.out.println(nombreClie.getText().toString());
-        outState.putString("nombreClie", nombreClie.getText().toString());
-        outState.putString("direccionClie", direccionClie.getText().toString());
-    }
-
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        String savedNombre = savedInstanceState.getString("nombreClie");
-        String savedDireccion = savedInstanceState.getString("direccionClie");
-        nombreClie.setText(savedNombre);
-        direccionClie.setText(savedDireccion);
-    }
-    */
 }

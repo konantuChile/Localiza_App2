@@ -5,7 +5,6 @@ package com.example.konan.localiza_app.Clases;
  */
 
 public class Gestiones {
-    private String title;
     private String idClienteGest;
     private String idGestion;
     private String nombreGestiones;
