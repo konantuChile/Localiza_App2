@@ -217,6 +217,9 @@ public class IngresaGestionActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(IngresaGestionActivity .this,FinGestionActivity.class);
 
+                nombreGest = nombreGestionIngGestTV.getText().toString();
+                nombreClie = nombreClieIngGestTV.getText().toString();
+
                 intent.putExtra("idClie",idClie);
                 intent.putExtra("nombreGest", nombreGest);
                 intent.putExtra("nombreClie",nombreClie);

@@ -65,7 +65,8 @@ public class GestionesActivity extends AppCompatActivity {
             }
             else
             {
-
+                CargarArregloFitrado(idClie);
+                EliminaMovimiento(nombreGest);
             }
         }
 
@@ -189,6 +190,26 @@ public class GestionesActivity extends AppCompatActivity {
                 itemFiltro = new Gestiones(arraydir.get(i).getIdGestion());
                 arrayFiltro.add(itemFiltro);
 
+                // Creo el adapter personalizado
+                AdapterGestion adaptador = new AdapterGestion(this, arrayFiltro);
+                // Lo aplico
+                lvGestion.setAdapter(adaptador);
+            }
+        }
+    }
+
+    private  void EliminaMovimiento(String nombreGestion) {
+
+        //arrayFiltro.clear();//.getAdapter(null);
+        Gestiones itemFiltro;
+
+
+
+        for (int i = 0; i < arrayFiltro.size(); i++){
+            System.out.println(arrayFiltro.get(i).getIdClienteGest());
+            if (arrayFiltro.get(i).getNombreGestiones().equals(nombreGestion)) {
+
+                arrayFiltro.remove(i);
                 // Creo el adapter personalizado
                 AdapterGestion adaptador = new AdapterGestion(this, arrayFiltro);
                 // Lo aplico
