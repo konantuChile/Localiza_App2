@@ -27,6 +27,10 @@ public class Gestiones {
         this.idClienteGest = idClienteGest;
         this.idGestion = idGestion;
     }
+    public Gestiones(String nombreGestiones) {
+        super();
+        this.nombreGestiones = nombreGestiones;
+    }
 
     public String getIdClienteGest() {
         return idClienteGest;
@@ -34,11 +38,6 @@ public class Gestiones {
 
     public void setIdClienteGest(String idClienteGest) {
         this.idClienteGest = idClienteGest;
-    }
-
-    public Gestiones(String nombreGestiones) {
-        super();
-        this.nombreGestiones = nombreGestiones;
     }
 
     public String getIdGestion() {
@@ -53,7 +52,7 @@ public class Gestiones {
         return nombreGestiones;
     }
 
-    public void setNombreGestiones(String NombreGestiones) {
+    public void setNombreGestiones(String nombreGestiones) {
         this.nombreGestiones = nombreGestiones;
     }
 

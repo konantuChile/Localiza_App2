@@ -28,6 +28,7 @@ public class IngresaGestionActivity extends AppCompatActivity {
     TextView direccionClieIngGestTV;
     TextView nombreGestionIngGestTV;
 
+    String idClie;
     String nombreClie;
     String direccionClie;
     String nombreGest;
@@ -64,6 +65,7 @@ public class IngresaGestionActivity extends AppCompatActivity {
         Bundle parametro = getIntent().getExtras();
 
         if (parametro != null) {
+            idClie = parametro.getString("idClie");
             nombreClieIngGestTV.setText(parametro.getString("nombreClie"));
             nombreClie = parametro.getString("nombreClie");
             direccionClieIngGestTV.setText(parametro.getString("direccionClie"));
@@ -215,6 +217,7 @@ public class IngresaGestionActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(IngresaGestionActivity .this,FinGestionActivity.class);
 
+                intent.putExtra("idClie",idClie);
                 intent.putExtra("nombreGest", nombreGest);
                 intent.putExtra("nombreClie",nombreClie);
                 intent.putExtra("direccionClie", direccionClie);
@@ -223,5 +226,11 @@ public class IngresaGestionActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return false;
     }
 }

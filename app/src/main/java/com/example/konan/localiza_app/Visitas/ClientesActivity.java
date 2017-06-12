@@ -24,7 +24,7 @@ public class ClientesActivity extends AppCompatActivity {
 
 
         Button clientessalirboton = (Button) findViewById(R.id.clientesSalirBoton);
-        final  TextView idClie = (TextView) findViewById(R.id.idClienteItem);
+        final TextView idClie = (TextView) findViewById(R.id.idClienteItem);
         final TextView nombreClie = (TextView) findViewById(R.id.nombreClienteItem);
         final TextView direccionClie = (TextView) findViewById(R.id.direccionClienteItem);
 

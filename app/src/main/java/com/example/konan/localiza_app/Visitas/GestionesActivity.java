@@ -24,7 +24,12 @@ public class GestionesActivity extends AppCompatActivity {
     String idClie;
     String nombreClie;
     String direccionClie;
+    String nombreGest="";
     ListView lvGestion;
+    ListView lvGestionFiltro;
+
+    ArrayList<Gestiones> arrayFiltro = new ArrayList<Gestiones>();
+    ArrayList<Gestiones> arraydir = new ArrayList<Gestiones>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,27 +44,29 @@ public class GestionesActivity extends AppCompatActivity {
 
         lvGestion = (ListView) findViewById(R.id.gestionesList);
 
+
         Bundle parametro = getIntent().getExtras();
 
         if (parametro != null)
         {
-            movClie= parametro.getString("movClie");
-            movClie= parametro.getString("idClie");
+            movClie = parametro.getString("movClie");
+            idClie = parametro.getString("idClie");
             nombreClieTV.setText(parametro.getString("nombreClie"));
             nombreClie = parametro.getString("nombreClie");
             direccionClieTV.setText(parametro.getString("direccionClie"));
             direccionClie = parametro.getString("direccionClie");
+            nombreGest = parametro.getString("nombreGest");
+
+            CargarArreglo();
 
             if(movClie.equals("0"))
             {
-                CargarArreglo();
+                CargarArregloFitrado(idClie);
             }
             else
             {
 
             }
-            //idClie.setText(parametro.getString("nombreClie"));
-
         }
 
         gestionsalirboton.setOnClickListener(new View.OnClickListener() {
@@ -72,23 +79,6 @@ public class GestionesActivity extends AppCompatActivity {
             }
         });
 
-
-/*
-        ArrayList<Gestiones> arraydir = new ArrayList<Gestiones>();
-        Gestiones item;
-
-        // Introduzco los datos
-        item = new Gestiones(" Comprobar Domicilio");
-        arraydir.add(item);
-        item = new Gestiones(" Cobranza");
-        arraydir.add(item);
-        item = new Gestiones(" Entregar Informacion");
-        arraydir.add(item);
-        // Creo el adapter personalizado
-        AdapterGestion adaptador = new AdapterGestion(this, arraydir);
-        // Lo aplico
-        lvGestion.setAdapter(adaptador);
-*/
         lvGestion.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -97,6 +87,7 @@ public class GestionesActivity extends AppCompatActivity {
 
                 TextView nombreGestiontextView = (TextView) view.findViewById(R.id.nombreGestiones);
                 String nombreGest = nombreGestiontextView .getText().toString();
+                intent.putExtra("idClie", idClie);
                 intent.putExtra("nombreGest", nombreGest);
                 intent.putExtra("nombreClie",nombreClie);
                 intent.putExtra("direccionClie", direccionClie);
@@ -107,7 +98,7 @@ public class GestionesActivity extends AppCompatActivity {
 
     private void CargarArreglo() {
 
-        ArrayList<Gestiones> arraydir = new ArrayList<Gestiones>();
+        //ArrayList<Gestiones> arraydir = new ArrayList<Gestiones>();
         Gestiones item;
 
         item = new Gestiones("10152214-8","Cobranza");
@@ -187,7 +178,22 @@ public class GestionesActivity extends AppCompatActivity {
         lvGestion.setAdapter(adaptador);
     }
 
-    private  void CargarArregloFitrado(){
+    private  void CargarArregloFitrado(String idCliente) {
 
+        arrayFiltro.clear();//.getAdapter(null);
+        Gestiones itemFiltro;
+
+        for (int i = 0; i < arraydir.size(); i++){
+            System.out.println(arraydir.get(i).getIdClienteGest());
+            if (arraydir.get(i).getIdClienteGest().equals(idCliente)) {
+                itemFiltro = new Gestiones(arraydir.get(i).getIdGestion());
+                arrayFiltro.add(itemFiltro);
+
+                // Creo el adapter personalizado
+                AdapterGestion adaptador = new AdapterGestion(this, arrayFiltro);
+                // Lo aplico
+                lvGestion.setAdapter(adaptador);
+            }
+        }
     }
 }

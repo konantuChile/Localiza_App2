@@ -49,7 +49,6 @@
             android:parentActivityName="com.example.konan.localiza_app.Visitas.IniciaGestionActivity"
             android:label="Ingresar Gestion"/>
         <activity android:name=".Visitas.FinGestionActivity"
-            android:parentActivityName="com.example.konan.localiza_app.Visitas.ClientesActivity"
             android:label="Gestión Finalizada"/>
         <activity android:name=".Visitas.HistorialActivity"
             android:parentActivityName="com.example.konan.localiza_app.Visitas.GestionesActivity"

@@ -63,6 +63,9 @@ public class AdapterCliente extends BaseAdapter {
         Clientes dir;
         dir = items.get(position);
 
+        TextView idClie = (TextView) v.findViewById(R.id.idClienteItem);
+        idClie.setText(dir.getIdCliente());
+
         TextView nombreClie = (TextView) v.findViewById(R.id.nombreClienteItem);
         nombreClie.setText(dir.getNombreCliente());
 
