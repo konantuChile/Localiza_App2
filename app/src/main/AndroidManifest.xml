@@ -18,13 +18,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
             android:name=".LoginActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
+
                 <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value="com.example.konan.localiza_app.Visitas.ClientesActivity" />
@@ -34,25 +35,31 @@
         <activity
             android:name=".MenuActivity"
             android:label="Menú Principal"
-            android:parentActivityName="com.example.konan.localiza_app.LoginActivity"
-        />
-        <activity android:name=".Visitas.ClientesActivity"
-            android:parentActivityName="com.example.konan.localiza_app.MenuActivity"
-            android:label="Listado Clientes a Visitar"/>
-        <activity android:name=".Visitas.GestionesActivity"
-            android:parentActivityName="com.example.konan.localiza_app.Visitas.ClientesActivity"
-            android:label="Listado Gestiones a Realizar"/>
-        <activity android:name=".Visitas.IniciaGestionActivity"
-            android:parentActivityName="com.example.konan.localiza_app.Visitas.GestionesActivity"
-            android:label="Inicia Gestión"/>
-        <activity android:name=".Visitas.IngresaGestionActivity"
-            android:parentActivityName="com.example.konan.localiza_app.Visitas.IniciaGestionActivity"
-            android:label="Ingresar Gestion"/>
-        <activity android:name=".Visitas.FinGestionActivity"
-            android:label="Gestión Finalizada"/>
-        <activity android:name=".Visitas.HistorialActivity"
-            android:parentActivityName="com.example.konan.localiza_app.Visitas.GestionesActivity"
-            android:label="Listado Histórico Gestiones"/>
+            android:parentActivityName=".LoginActivity" />
+        <activity
+            android:name=".Visitas.ClientesActivity"
+            android:label="Listado Clientes a Visitar"
+            android:parentActivityName=".MenuActivity" />
+        <activity
+            android:name=".Visitas.GestionesActivity"
+            android:label="Listado Gestiones a Realizar"
+            android:parentActivityName=".Visitas.ClientesActivity" />
+        <activity
+            android:name=".Visitas.IniciaGestionActivity"
+            android:label="Inicia Gestión"
+            android:parentActivityName=".Visitas.GestionesActivity" />
+        <activity
+            android:name=".Visitas.IngresaGestionActivity"
+            android:label="Ingresar Gestion"
+            android:parentActivityName=".Visitas.IniciaGestionActivity" />
+        <activity
+            android:name=".Visitas.FinGestionActivity"
+            android:label="Gestión Finalizada" />
+        <activity
+            android:name=".Visitas.HistorialActivity"
+            android:label="Listado Histórico Gestiones"
+            android:parentActivityName=".Visitas.GestionesActivity" />
+        <activity android:name=".Visitas.NodisponibleActivity"></activity>
     </application>
 
 </manifest>

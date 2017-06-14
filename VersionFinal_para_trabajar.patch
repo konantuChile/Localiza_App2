@@ -1,0 +1,88 @@
+Index: app/src/main/java/com/example/konan/localiza_app/Clases/AdapterCliente.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/konan/localiza_app/Clases/AdapterCliente.java	(date 1496231279000)
++++ app/src/main/java/com/example/konan/localiza_app/Clases/AdapterCliente.java	(revision )
+@@ -9,7 +9,6 @@
+ import android.widget.TextView;
+ 
+ import com.example.konan.localiza_app.R;
+-import com.example.konan.localiza_app.Visitas.ClientesActivity;
+ 
+ import java.util.ArrayList;
+ 
+\ No newline at end of file
+Index: app/src/main/java/com/example/konan/localiza_app/Clases/Clientes.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/konan/localiza_app/Clases/Clientes.java	(date 1496231279000)
++++ app/src/main/java/com/example/konan/localiza_app/Clases/Clientes.java	(revision )
+@@ -1,0 +1,0 @@
+Index: app/src/main/java/com/example/konan/localiza_app/MenuActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/konan/localiza_app/MenuActivity.java	(date 1496231279000)
++++ app/src/main/java/com/example/konan/localiza_app/MenuActivity.java	(revision )
+@@ -1,0 +1,0 @@
+Index: app/src/main/java/com/example/konan/localiza_app/Visitas/ClientesActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/konan/localiza_app/Visitas/ClientesActivity.java	(date 1496231279000)
++++ app/src/main/java/com/example/konan/localiza_app/Visitas/ClientesActivity.java	(revision )
+@@ -1,0 +1,0 @@
+Index: app/src/main/java/com/example/konan/localiza_app/Visitas/GestionesActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/konan/localiza_app/Visitas/GestionesActivity.java	(date 1496231279000)
++++ app/src/main/java/com/example/konan/localiza_app/Visitas/GestionesActivity.java	(revision )
+@@ -1,0 +1,0 @@
+Index: app/src/main/java/com/example/konan/localiza_app/Visitas/IniciaGestionActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/konan/localiza_app/Visitas/IniciaGestionActivity.java	(date 1496231279000)
++++ app/src/main/java/com/example/konan/localiza_app/Visitas/IniciaGestionActivity.java	(revision )
+@@ -1,0 +1,0 @@
+Index: app/src/main/java/com/example/konan/localiza_app/LoginActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/konan/localiza_app/LoginActivity.java	(date 1496231279000)
++++ app/src/main/java/com/example/konan/localiza_app/LoginActivity.java	(revision )
+@@ -1,0 +1,0 @@
+Index: app/src/main/java/com/example/konan/localiza_app/Planifica/NodisponibleActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/konan/localiza_app/Planifica/NodisponibleActivity.java	(date 1496231279000)
++++ app/src/main/java/com/example/konan/localiza_app/Planifica/NodisponibleActivity.java	(revision )
+@@ -1,0 +1,0 @@
+Index: app/src/main/java/com/example/konan/localiza_app/Clases/AdapterGestion.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/konan/localiza_app/Clases/AdapterGestion.java	(date 1496231279000)
++++ app/src/main/java/com/example/konan/localiza_app/Clases/AdapterGestion.java	(revision )
+@@ -1,0 +1,0 @@
+Index: app/src/main/java/com/example/konan/localiza_app/Clases/Gestiones.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/konan/localiza_app/Clases/Gestiones.java	(date 1496231279000)
++++ app/src/main/java/com/example/konan/localiza_app/Clases/Gestiones.java	(revision )
+@@ -1,0 +1,0 @@
