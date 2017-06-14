@@ -15,10 +15,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
         android:orientation="vertical"
+        android:weightSum="1"
         android:layout_alignParentTop="true"
-        android:weightSum="1">
+        android:layout_alignParentStart="true">
 
         <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/fintableLayout11"
@@ -36,8 +36,8 @@
                     android:id="@+id/imageView4"
                     android:layout_width="112dp"
                     android:layout_height="52dp"
-                    app:srcCompat="@drawable/clientes"
-                    android:layout_weight="0.03" />
+                    android:layout_weight="0.03"
+                    app:srcCompat="@drawable/clientes2" />
 
                 <LinearLayout android:orientation="vertical">
                     <TextView
@@ -53,7 +53,7 @@
                         android:id="@+id/direccionClienteFinGestion"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Direccion CLiente" />
+                        android:text="Direccion cliente" />
 
                 </LinearLayout>
             </TableRow>
@@ -62,7 +62,7 @@
                 android:id="@+id/tableRowTituloFin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="5dip" >
+                android:padding="5dp" >
 
                 <LinearLayout android:orientation="vertical">
 
@@ -84,26 +84,36 @@
             <!-- edittext span 2 column -->
 
         </TableLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
             <TextView
                 android:id="@+id/lblNroFinGestion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="21dp"
                 android:text="Gestion N°:"
-                android:textSize="21sp" />
+                android:textSize="21sp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
 
-            <TextView
-                android:id="@+id/broFinGestion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1234566"
-                android:textSize="21sp" />
 
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/broFinGestion"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="1234566"
+            android:textSize="21sp" />
 
         <Button
             android:id="@+id/salirFinGestionBoton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.03"
             android:text="Salir" />
 
     </LinearLayout>

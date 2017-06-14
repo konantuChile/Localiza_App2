@@ -10,7 +10,7 @@ public class Gestiones {
     private String nombreGestiones;
     private String statusGestion;
 
-    public Gestiones() {
+       public Gestiones() {
         super();
     }
 

@@ -9,10 +9,9 @@
         android:layout_height="wrap_content"
         android:text="Texto Frase"
         android:id="@+id/nombreGestiones"
-        android:layout_below="@+id/imageView4"
-        android:layout_toRightOf="@+id/imageView4"
-        android:layout_toEndOf="@+id/imageView4" />
-
+        android:layout_alignBottom="@+id/imageView4"
+        android:layout_toEndOf="@+id/imageView4"
+        android:layout_marginStart="18dp" />
 
     <ImageView
         android:layout_width="wrap_content"

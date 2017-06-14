@@ -7,6 +7,7 @@ import android.graphics.drawable.Drawable;
  */
 
 public class Clientes {
+
     private String title;
     private String idCliente;
     private String nombreCliente;

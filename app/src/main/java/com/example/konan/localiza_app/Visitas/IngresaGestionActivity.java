@@ -14,7 +14,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.konan.localiza_app.MenuActivity;
 import com.example.konan.localiza_app.R;
 
 import java.io.File;
@@ -55,7 +54,6 @@ public class IngresaGestionActivity extends AppCompatActivity {
         Button selecResultadoGestionBoton = (Button) findViewById(R.id.selecResultadoGestionBoton);
         Button tomarFotoGestionBoton = (Button) findViewById(R.id.tomarFotoGestionBoton);
         Button ingComentarioGestionBoton = (Button) findViewById(R.id.ingComentarioGestionBoton);
-        Button salirIngGestionBoton = (Button) findViewById(R.id.salirIngGestionBoton);
         Button confirmarIngGestionBoton = (Button) findViewById(R.id.confirmarIngGestionBoton);
 
         //FOTOS
@@ -74,15 +72,6 @@ public class IngresaGestionActivity extends AppCompatActivity {
             nombreGest = parametro.getString("nombreGest");
         }
 
-        salirIngGestionBoton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(IngresaGestionActivity.this, MenuActivity.class);
-
-                startActivity(intent);
-
-            }
-        });
 
         selecContactoGestionBoton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -131,7 +120,7 @@ public class IngresaGestionActivity extends AppCompatActivity {
 
                 //Initialize a new String Array
                 final String[] Resultado = new String[]{
-                        "Entraga Documentación", "No Recibe Documentación", "No Vive Allí", "Otro",
+                        "Entrega Documentación", "No Recibe Documentación", "No Vive Allí", "Otro",
                 };
 
                 //Set a list of items to be displayed in the dialog as the content

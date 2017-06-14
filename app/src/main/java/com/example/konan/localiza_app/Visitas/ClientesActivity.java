@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -22,23 +21,12 @@ public class ClientesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clientes);
 
-
-        Button clientessalirboton = (Button) findViewById(R.id.clientesSalirBoton);
         final TextView idClie = (TextView) findViewById(R.id.idClienteItem);
         final TextView nombreClie = (TextView) findViewById(R.id.nombreClienteItem);
         final TextView direccionClie = (TextView) findViewById(R.id.direccionClienteItem);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        // If your minSdkVersion is 11 or higher, instead use:
-        // getActionBar().setDisplayHomeAsUpEnabled(true);
 
-        clientessalirboton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-
-            }
-        });
         ListView lv = (ListView) findViewById(R.id.list1);
 
         ArrayList<Clientes> arraydir = new ArrayList< Clientes>();

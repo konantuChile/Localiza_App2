@@ -5,13 +5,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.konan.localiza_app.Clases.AdapterGestion;
 import com.example.konan.localiza_app.Clases.Gestiones;
-import com.example.konan.localiza_app.MenuActivity;
 import com.example.konan.localiza_app.R;
 
 import java.util.ArrayList;
@@ -40,10 +38,8 @@ public class GestionesActivity extends AppCompatActivity {
 
         nombreClieTV = (TextView) findViewById(R.id.nombreClienteGestiones);
         direccionClieTV = (TextView) findViewById(R.id.direccionClienteGestiones);
-        Button gestionsalirboton = (Button) findViewById(R.id.gestionesSalirBoton);
 
         lvGestion = (ListView) findViewById(R.id.gestionesList);
-
 
         Bundle parametro = getIntent().getExtras();
 
@@ -69,16 +65,6 @@ public class GestionesActivity extends AppCompatActivity {
                 EliminaMovimiento(nombreGest);
             }
         }
-
-        gestionsalirboton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(GestionesActivity.this,MenuActivity.class);
-
-                startActivity(intent);
-
-            }
-        });
 
         lvGestion.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

@@ -71,10 +71,7 @@ public class AdapterCliente extends BaseAdapter {
 
         TextView direccionClie = (TextView) v.findViewById(R.id.direccionClienteItem);
         direccionClie.setText(dir.getDireccionCliente());
-/*
-        ImageView imagen = (ImageView) v.findViewById(R.id.imageView4);
-        imagen.setImageDrawable(dir.getImage());
-*/
+
         return v;
     }
 }
